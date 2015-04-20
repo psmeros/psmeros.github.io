@@ -1,0 +1,214 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% "ModernCV" CV and Cover Letter
+% LaTeX Template
+% Version 1.1 (9/12/12)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Xavier Danaux (xdanaux@gmail.com)
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+% Important note:
+% This template requires the moderncv.cls and .sty files to be in the same 
+% directory as this .tex file. These files provide the resume style and themes 
+% used for structuring the document.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	NEW COMMAND FOR MY WEBSITE (used in basic information and publications)
+%----------------------------------------------------------------------------------------
+\newcommand{\mywebsite}{http://users.uoa.gr/~psmeros/}
+\newcommand{\myhomepage}{users.uoa.gr/~psmeros}
+\newcommand{\myhomepagetext}{users.uoa.gr/$\sim$psmeros}
+
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[11pt,a4paper,roman]{moderncv} % Font sizes: 10, 11, or 12; paper sizes: a4paper, letterpaper, a5paper, legalpaper, executivepaper or landscape; font families: sans or roman
+
+\moderncvstyle{classic} % CV theme - options include: 'casual' (default), 'classic', 'oldstyle' and 'banking'
+\moderncvcolor{blue} % CV color - options include: 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
+
+%\usepackage{lipsum} % Used for inserting dummy 'Lorem ipsum' text into the template
+
+\usepackage[scale=0.85]{geometry} % Reduce document margins
+\setlength{\hintscolumnwidth}{2cm} % Uncomment to change the width of the dates column
+\setlength{\makecvtitlenamewidth}{5cm} % For the 'classic' style, uncomment to adjust the width of the space allocated to your name
+
+%----------------------------------------------------------------------------------------
+%	NAME AND CONTACT INFORMATION SECTION
+%----------------------------------------------------------------------------------------
+
+\firstname{Panayiotis} % Your first name
+\familyname{Smeros} % Your last name
+
+% All information in this block is optional, comment out any lines you don't need
+\title{Curriculum Vitae}
+\address{Office I1\\Department of Informatics and Telecommunications\\National and Kapodistrian University of Athens\\University Campus, Ilissia, GR-15784, Athens, Greece\\}{}
+\mobile{+30.6939.173.433}
+\phone{+30.210.727.5159}
+\fax{+30.210.727.5214}
+\email{psmeros@di.uoa.gr}
+\homepage{\myhomepage}{\myhomepagetext} % The first argument is the url for the clickable link, the second argument is the url displayed in the template - this allows special characters to be displayed such as the tilde in this example
+\photo[80pt][0.4pt]{psmeros} % The first bracket is the picture height, the second is the thickness of the frame around the picture (0pt for no frame)
+%\quote{}
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+\makecvtitle % Print the CV title
+
+
+
+%----------------------------------------------------------------------------------------
+%	PERSONAL INFORMATION SECTION
+%----------------------------------------------------------------------------------------
+
+\section{Personal Information}
+
+\cventry{Birth}{}{}{}{}{24 September 1989}{}
+\cventry{Nationality}{}{}{}{}{Greek}{}
+
+
+
+%----------------------------------------------------------------------------------------
+%	EDUCATION SECTION
+%----------------------------------------------------------------------------------------
+
+\section{Education}
+
+\cventry{2011-2014 \emph{(expected)}}
+{M.Sc student in Advanced Information Systems.}
+{\href{http://www.di.uoa.gr/en}{Department of Informatics and Telecommunications}, \href{http://en.uoa.gr}{National and Kapodistrian University of Athens}.}
+{Expected GPA: \emph{8.81}}
+{Diploma Dissertation: \emph{Discovering Geospatial and Temporal Links among RDF data.}}
+{Supervisor: \emph{Professor \href{http://cgi.di.uoa.gr/~koubarak/}{Manolis Koubarakis}}}
+{\newline}
+
+\cventry{2007-2011}
+{B.Sc student in Computer Systems and Applications.}
+{\href{http://www.di.uoa.gr/en}{Department of Informatics and Telecommunications}, \href{http://en.uoa.gr}{National and Kapodistrian University of Athens}.}
+{GPA: \emph{8.36}}
+{Diploma Dissertation: \emph{Storing RDF data and evaluating SPARQL queries using MapReduce.}}
+{Supervisor: \emph{Professor \href{http://cgi.di.uoa.gr/~koubarak/}{Manolis Koubarakis}}}
+{}
+
+
+
+%----------------------------------------------------------------------------------------
+%	EXPERIENCE SECTION
+%----------------------------------------------------------------------------------------
+
+\section{Experience}
+
+\subsection{Job}
+\cventry{2012-Now}{Scientific Programmer and Research Assistant.}{}{}{}
+{\href{http://www.di.uoa.gr/en}{Department of Informatics and Telecommunications}, \href{http://en.uoa.gr}{National and Kapodistrian University of Athens}.}{}
+\cvlistdoubleitem{}{European FP7 project \href{http://www.linkedeodata.eu}{LEO}:}{\emph{Research on Geospatial and Temporal Link Discovery.}}
+\cvlistdoubleitem{}{European FP7 project \href{http://www.melodiesproject.eu}{MELODIES}:}{\emph{Support on Linked Open Data.}}
+\cvlistdoubleitem{}{European FP7 project \href{http://www.earthobservatory.eu}{TELEIOS}:}{\emph{Webmaster, Research on the Temporal Dimension of stRDF.} \newline}
+
+\subsection{Developing}
+\cvlistdoubleitem{2014-Now}{Member of the Development Team of the \textbf{\href{http://silk.wbsg.de/}{Link Discovery Framework Silk}}:}{\emph{\newline Geospatial and Temporal Extensions.}\newline}
+\cvlistdoubleitem{2012-Now}{Member of the Development Team of the \textbf{\href{http://strabon.di.uoa.gr}{Semantic SpatioTemporal RDF store Strabon}}:}{\emph{\newline Test Suite, Bug Fixes, Extensions on the Temporal Component.}\newline}
+
+\subsection{Teaching}
+\cventry{2011-Now}{Tutorial Assistant.}{}{}{}
+{\href{http://www.di.uoa.gr/en}{Department of Informatics and Telecommunications}, \href{http://en.uoa.gr}{National and Kapodistrian University of Athens}.}{}
+\cvlistdoubleitem{}{\href{http://www.di.uoa.gr/~ys02}{Artificial Intelligence I}:}{\emph{Undergraduate Course.}}
+\cvlistdoubleitem{}{\href{http://www.di.uoa.gr/~artint2}{Artificial Intelligence II}:}{\emph{Undergraduate Course.}}
+\cvlistdoubleitem{}{\href{http://www.di.uoa.gr/~pms509}{Knowledge Technologies}:}{\emph{Postgraduate Course.}\newline}
+
+
+
+%----------------------------------------------------------------------------------------
+%	LANGUAGES SECTION
+%----------------------------------------------------------------------------------------
+
+\section{Languages}
+
+\cvitemwithcomment{Greek}{Native}{}
+\cvitemwithcomment{English}{Advanced}{Advanced Level Certificate in English (ALCE\textsuperscript{TM})}
+
+
+
+%----------------------------------------------------------------------------------------
+%	SKILLS SECTION
+%----------------------------------------------------------------------------------------
+
+\section{Skills}
+\cventry{Semantic \\ Web}{RDF, SPARQL/stSPARQL/GeoSPARQL, R2RML, Silk-LSL, OWL, XML, Sesame, Strabon, Protege, D2RQ, Silk}{}{}{}{}{}
+\cventry{Databases}{PostgreSQL, MySQL, MonetDB, Datalog, PostGIS}{}{}{}{}{}
+\cventry{Programming Languages}{}{}{}{}{}{Java, Scala, C/C++, Python, Bash/Awk/Sed, Prolog, Assembly MIPS}
+\cventry{Other Libraries}{}{}{}{}{}{MapReduce, CUDA, MPI, OpenGL, JXTA}
+\cventry{Software Management}{}{}{}{}{}{Mercurial/GitHub/Subversion, Apache Maven}{}{}{}{}{}
+\cventry{Web \\ Services}{Tomcat/Jetty Server, Drupal, Joomla, HTML, CSS, PHP, JSP, JavaScript/jQuery, Ajax, cURL}{}{}{}{}{}
+\cventry{Office Tools}{\LaTeX}{}{}{}{}{}
+\cventry{Operating Systems}{}{}{}{}{}{Linux (Ubuntu, CentOS), Sun Solaris, MS Windows, Apple Mac OS}
+\cventry{FP7 projects}{Writing Proposals/Deliverables}{}{}{}{}{}
+\cventry{General Research}{}{}{}{}{}{Subreviewer in ESWC and JWS}
+
+
+%----------------------------------------------------------------------------------------
+%	INTERESTS SECTION
+%----------------------------------------------------------------------------------------
+
+\section{Interests}
+
+\subsection{Scientific}
+\renewcommand{\listitemsymbol}{-~} % Changes the symbol used for lists
+\cvlistdoubleitem{}{Semantic Web}{Link Discovery}
+\cvlistdoubleitem{}{Databases}{Artificial Intelligence}
+\cvlistitem{Cloud Computing}
+
+\subsection{Other}
+\renewcommand{\listitemsymbol}{-~} % Changes the symbol used for lists
+\cvlistdoubleitem{}{Naively playing guitar.}{Going for night walks in Athens.}
+\cvlistdoubleitem{}{Attending theatre, cinema, live music performances.}{Participating in running and cycling contests.}
+\cvlistitem{Swimming and going to gym.}
+
+
+
+%----------------------------------------------------------------------------------------
+%	PUBLICATIONS SECTION
+%----------------------------------------------------------------------------------------
+
+\section{Publications}
+
+\subsection{Conferences}
+\cventry{2013}{}{}{}{}{}{}
+\cventry{}{}{}{}{}{\href{\mywebsite publications/2013/eswc2013.pdf}{K. Bereta, \textbf{P. Smeros} and M. Koubarakis. Representing and Querying the valid time of triples for Linked Geospatial Data. In the 10th Extended Semantic Web Conference (ESWC 2013). Montpellier, France. May 26-30, 2013.}}{\newline}
+\cventry{}{}{}{}{}{\href{\mywebsite publications/2013/edbt2013.pdf}{M. Koubarakis, C. Kontoes, S. Manegold, M. Karpathiotakis, K. Kyzirakos, K. Bereta, G. Garbis, C. Nikolaou, D. Michail, I. Papoutsis, T. Herekakis, M. Ivanova, Y. Zhang, H. Pirk, M. Kersten, K. Dogani, S. Giannakopoulou and \textbf{P. Smeros}. Real-Time Wildfire Monitoring Using Scientific Database and Linked Data Technologies. In the 16th International Conference on Extending Database Technology (EDBT 2013). Genoa, Italy. March 18-22, 2013.}}{\newline}
+
+\subsection{Workshops}
+\cventry{2013}{}{}{}{}{}{}
+\cventry{}{}{}{}{}{\href{\mywebsite publications/2013/knowlod2013.pdf}{I. Horrocks, T. Hubauer, E. Jim\'{e}nez-Ruiz, E. Kharlamov, M. Koubarakis, R. M\"{o}ller, K. Bereta, C. Neuenstadt, \"{O}. \"{O}z\c{c}ep, M. Roshchin, \textbf{P. Smeros}, and D. Zheleznyakov. Addressing Streaming and Historical Data in OBDA Systems: Optique's Approach (Statement of Interest). In Knowledge Discovery and Data Mining Meets Linked Open Data Workshop (Know@LOD). Montpellier, France. May 26-30, 2013.}}{\newline}
+
+\subsection{Demos}
+\cventry{2013}{}{}{}{}{}{}
+\cventry{}{}{}{}{}{\href{\mywebsite publications/2013/sstd2013.pdf}{K. Kyzirakos, M. Karpathiotakis, K. Bereta, G. Garbis, C. Nikolaou, \textbf{P. Smeros}, S. Giannakopoulou, K. Dogani, and M. Koubarakis. The Spatiotemporal RDF Store Strabon. In the 13th International Symposium on Spatial and Temporal Databases (SSTD 2013). Munich, Germany. August 21-23, 2013.}}{\newline}
+
+\subsection{Technical Reports}
+\cventry{2013}{}{}{}{}{}{}
+\cventry{}{}{}{}{}{K. Bereta, K. Dogani, G. Garbis, S. Giannakopoulou, M. Koubarakis, K. Kyzirakos, C. Nikolaou, M. Sioutis and \textbf{P. Smeros}. An implementation of a temporal and spatial extension of RDF and SPARQL on top of MonetDB - phase II. Deliverable D4.2, European FP7 project TELEIOS.}{}
+
+
+
+%----------------------------------------------------------------------------------------
+%	PRESENTATIONS SECTION
+%----------------------------------------------------------------------------------------
+
+\section{Presentations}
+
+\cventry{2013}{}{}{}{}{}{}
+\cventry{}{}{}{}{}{Discovering Geospatial and Temporal Links among RDF data. Thursday Think Tank. CWI, Amsterdam. December 19 2013.}{\newline}
+\cventry{}{}{}{}{}{WP3: Interlinking EO data expressed in RDF. LEO kick-off meeting. Athens. October 30 2013.}{}
+\end{document}
