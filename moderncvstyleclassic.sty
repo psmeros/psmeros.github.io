@@ -305,7 +305,53 @@
 
 \renewcommand{\listitemsymbol}{-~} % Changes the symbol used for lists
 
+\newcommand*{\info}[3][.25em]{%
+  \begin{tabular}{@{}p{\hintscolumnwidth}@{\hspace{\separatorcolumnwidth}}p{\maincolumnwidth}@{}}%
+ 	  \raggedleft\hintstyle{\footnotesize#2} & #3%
+  \end{tabular}%
+  \par\addvspace{#1}}
+
+\newcommand*{\education}[7][.25em]{%
+  \cvitem[#1]{\footnotesize#2}{%
+    {\bfseries#3}%
+    \ifthenelse{\equal{#4}{}}{}{ #4 \newline}%
+    \ifthenelse{\equal{#5}{}}{}{ #5 \newline}%
+    \ifthenelse{\equal{#6}{}}{}{ #6 \newline}%
+    \ifthenelse{\equal{#7}{}}{}{ #7 \newline}%
+    \strut%
+}}
+
+% % % % % % % % % % psmeros % % % % % % % % % % % % %
+
+\newcommand*{\publication}[3][.25em]{%
+  \begin{tabular}{@{}p{\hintscolumnwidth}@{\hspace{\separatorcolumnwidth}}p{\maincolumnwidth}@{}}%
+ 	  \raggedleft\hintstyle{} & \ifthenelse{\equal{#3}{}}{#2}{\href{\mywebsite #3}{#2}}%
+  \end{tabular}%
+  \par\addvspace{#1}}
+
+\newcommand*{\cvdate}[2][.25em]{%
+  \begin{tabular}{@{}p{\hintscolumnwidth}@{\hspace{\separatorcolumnwidth}}p{\maincolumnwidth}@{}}%
+ 	  \raggedleft\hintstyle{\footnotesize#2}%
+  \end{tabular}%
+  \par\addvspace{#1}}
+
+\newcommand*{\experience}[4][.25em]{%
+  \begin{tabular}{@{}p{\hintscolumnwidth}@{\hspace{\separatorcolumnwidth}}p{\maincolumnwidth}@{}}%
+ 	  \raggedleft\hintstyle{\footnotesize#2} & {\bfseries#3} #4%
+  \end{tabular}%
+  \par\addvspace{#1}}
+
+\newcommand*{\report}[2][.25em]{%
+  \begin{tabular}{@{}p{\hintscolumnwidth}@{\hspace{\separatorcolumnwidth}}p{2\separatorcolumnwidth}@{}p{\maincolumnwidth-2\separatorcolumnwidth}}%
+ 	  \raggedleft\hintstyle{} & {} & {- #2}%
+  \end{tabular}%
+  \par\addvspace{#1}}
+
+\newcommand*{\skill}[3][.25em]{%
+  \begin{tabular}{@{}p{\hintscolumnwidth}@{\hspace{\separatorcolumnwidth}}p{\maincolumnwidth}@{}}%
+ 	  \noindent\parbox[b]{\hsize}{\raggedleft\hintstyle{\footnotesize#2}} & #3%
+  \end{tabular}%
+  \par\addvspace{#1}}
+  
 \endinput
-
-
 %% end of file `moderncvstyleclassic.sty'.
