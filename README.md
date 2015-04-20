@@ -1,2 +1,2 @@
-# website
-My personal website.
+# My personal website
+You can view it online here: http://users.uoa.gr/~psmeros/.
