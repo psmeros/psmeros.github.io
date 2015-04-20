@@ -117,11 +117,19 @@ img {
 
 #colOne .meta {
 	background: url(images/img3.gif) repeat-x left bottom;
-	margin-bottom: 3em;
-	padding-bottom: 3em;
+	margin-bottom: 1em;
+	padding-bottom: 1em;
 	text-align: right;
 	font-style: italic;
-	font-size: .8em;
+	font-size: x-large;
+}
+
+#colOne .date {
+	margin-bottom: 1em;
+	padding-bottom: 1em;
+	text-align: right;
+	font-style: italic;
+	font-size: 0.8em;
 }
 
 /* Column Two */
