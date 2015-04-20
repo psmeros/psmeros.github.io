@@ -206,7 +206,7 @@
     \ifthenelse{\equal{#5}{}}{}{ #5 \newline}%
     \ifthenelse{\equal{#6}{}}{}{ #6 \newline}%
     \ifthenelse{\equal{#7}{}}{}{ #7}%
-    \ifthenelse{\equal{#8}{}}{}{\vspace*{\fill}\bfseries#8}%
+    \ifthenelse{\equal{#8}{}}{}{\vspace*{\fill} #8}%
     \strut%
 }}
 
@@ -303,7 +303,7 @@
     {\color{color2}\itshape\enclname: \@enclosure}}}
 
 
-\renewcommand{\listitemsymbol}{} % Changes the symbol used for lists
+\renewcommand{\listitemsymbol}{-~} % Changes the symbol used for lists
 
 \endinput
 
