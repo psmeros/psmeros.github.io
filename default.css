@@ -1,4 +1,3 @@
-
 /*
 Design by Free CSS Templates
 http://www.freecsstemplates.org
@@ -44,10 +43,11 @@ img {
 /* Header */
 
 #header {
-	width: 700px;
+	width: 900px;
 	height: 150px;
 	margin: 0 auto 20px auto;
-	background: #344E44 url(images/img1.gif);
+	background: #344E44 no-repeat url(images/img1.gif);
+	background-size: 100%;
 }
 
 #header h1 {
@@ -96,7 +96,7 @@ img {
 /* Content */
 
 #content {
-	width: 700px;
+	width: 900px;
 	margin: 0 auto;
 }
 
@@ -104,7 +104,7 @@ img {
 
 #colOne {
 	float: left;
-	width: 480px;
+	width: 680px;
 }
 
 #colOne .title {
@@ -184,11 +184,12 @@ img {
 /* Footer */
 
 #footer {
-	width: 700px;
+	width: 900px;
 	height: 40px;
 	margin: 0 auto;
 	padding-top: 20px;
-	background: url(images/img4.gif);
+	background: no-repeat url(images/img4.gif);
+	background-size: 100%;
 }
 
 #footer p {
