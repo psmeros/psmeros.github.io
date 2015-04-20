@@ -117,8 +117,8 @@ img {
 
 #colOne .meta {
 	background: url(images/img3.gif) repeat-x left bottom;
-	margin-bottom: 1em;
-	padding-bottom: 1em;
+	margin-bottom: 0.5em;
+	padding-bottom: 0.5em;
 	text-align: right;
 	font-style: italic;
 	font-size: x-large;
