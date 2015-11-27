@@ -6,8 +6,8 @@ cp -r "$folder" "$folder".bak
 
 sqlite3 publicationsDB ".mode csv"
 sqlite3 publicationsDB ".separator \"|\""
-sqlite3 publicationsDB ".import etc/publications.csv publications"
-sqlite3 publicationsDB ".import etc/categories.csv categories"
+sqlite3 publicationsDB ".import ../etc/publications.csv publications"
+sqlite3 publicationsDB ".import ../etc/categories.csv categories"
 sqlite3 publicationsDB ".mode tabs"
 
 publicationFormat="'<li><p>' || Authors || ' ' || '<i>' || Title || '</i>' || ' ' || Conference || ' ' || PlaceTime || ' ' || case when like('%.pdf', Link)=1 then '[<a href=\"' || Link || '\">pdf</a>]' else case when like('http%', Link)=1 then '[<a href=\"' || Link || '\">link</a>]' else '' end end || '</p></li>'"
@@ -24,7 +24,7 @@ rm publicationsDB
 
 sqlite3 deliverablesDB ".mode csv"
 sqlite3 deliverablesDB ".separator \"|\""
-sqlite3 deliverablesDB ".import etc/deliverables.csv deliverables"
+sqlite3 deliverablesDB ".import ../etc/deliverables.csv deliverables"
 sqlite3 deliverablesDB ".mode tabs"
 
 deliverableFormat="'<li><p>' || Authors || ' ' || '<i>' || Title || '</i>' || ' ' || Info || '</p></li>'"

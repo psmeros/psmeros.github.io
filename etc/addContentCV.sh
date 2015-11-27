@@ -6,8 +6,8 @@ cp "$file" "$file".bak
 
 sqlite3 publicationsDB ".mode csv"
 sqlite3 publicationsDB ".separator \"|\""
-sqlite3 publicationsDB ".import etc/publications.csv publications"
-sqlite3 publicationsDB ".import etc/categories.csv categories"
+sqlite3 publicationsDB ".import ../etc/publications.csv publications"
+sqlite3 publicationsDB ".import ../etc/categories.csv categories"
 sqlite3 publicationsDB ".mode tabs"
 
 publications=`sqlite3 publicationsDB "select '\\\\\subsection{\\\\\\newline ' || Category || '}' || group_concat(publicationlist, ' ') from (
@@ -21,7 +21,7 @@ rm publicationsDB
 
 sqlite3 deliverablesDB ".mode csv"
 sqlite3 deliverablesDB ".separator \"|\""
-sqlite3 deliverablesDB ".import etc/deliverables.csv deliverables"
+sqlite3 deliverablesDB ".import ../etc/deliverables.csv deliverables"
 sqlite3 deliverablesDB ".mode tabs"
 
 deliverableFormat=""
