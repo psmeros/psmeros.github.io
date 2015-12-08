@@ -1,10 +1,6 @@
 #!/bin/bash
 
 ../etc/addContentWebsite.sh
-sudo mkdir tmp
-sudo sshfs psmeros@users.uoa.gr: tmp
-sudo rm -r tmp/public_html
-sudo cp -r public_html tmp/
-sudo umount tmp
-sudo rm -r tmp
+scp -r public_html psmeros@jose.di.uoa.gr:
+ssh -t psmeros@jose.di.uoa.gr 'mkdir tmp; sshfs psmeros@users.uoa.gr: tmp; rm -r tmp/public_html; cp -r public_html tmp/; fusermount -u tmp; rm -r tmp public_html'
 ../etc/removeContentWebsite.sh
