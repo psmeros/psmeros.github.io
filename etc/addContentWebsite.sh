@@ -4,7 +4,7 @@ folder="public_html"
 cp -r "$folder" "$folder".bak
 
 
-publicationFormat="'<li><p>' || Authors || ' ' || '<i>' || Title || '</i>' || ' ' || Conference || ' ' || PlaceTime || ' ' || case when like('%.pdf', Link)=1 then '[<a href=\"' || Link || '\">pdf</a>]' else case when like('http%', Link)=1 then '[<a href=\"' || Link || '\">link</a>]' else '' end end || '</p></li>'"
+publicationFormat="'<li><p>' || Authors || ' ' || '<i>' || Title || '</i>' || ' ' || Conference || ' ' || PlaceTime || ' ' || case when like('%.pdf', Link)=1 then '[<a href=\"publications/' || Link || '\">pdf</a>]' else case when like('http%', Link)=1 then '[<a href=\"' || Link || '\">link</a>]' else '' end end || '</p></li>'"
 categoryFormat="'<a id=\"' || replace(Category,\" \",\"\") || '\" href=\"#' || replace(Category,\" \",\"\") || '\">' || Category || '</a>'"
 
 publications=`sqlite3 ../etc/psmerosDB "select '<p>' || $categoryFormat || '<br/>' || group_concat(publicationlist, ' ') || '</p>' from (
