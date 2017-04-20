@@ -100,6 +100,40 @@ img {
 	margin: 0 auto;
 }
 
+
+/* Both Columns */
+
+#colBoth {
+	float: left;
+	width: 880px;
+}
+
+#colBoth .title {
+	font-size: 2em;
+}
+
+#colBoth .posted {
+	margin-bottom: 1em;
+}
+
+#colBoth .meta {
+	background: url(images/img3.gif) repeat-x left bottom;
+	margin-bottom: 0.5em;
+	padding-bottom: 0.5em;
+	text-align: right;
+	font-style: italic;
+	font-size: x-large;
+}
+
+#colBoth .date {
+	margin-bottom: 1em;
+	padding-bottom: 1em;
+	text-align: right;
+	font-style: italic;
+	font-size: 0.8em;
+}
+
+
 /* Column One */
 
 #colOne {
