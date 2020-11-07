@@ -1,0 +1,49 @@
+#!/usr/bin/env python
+
+import pandas as pd
+import os
+
+author = 'P. Smeros'
+publications_file = 'docs/files/publications.csv'
+placeholder = '<!--//PUBLICATIONS!!-->'
+index_html = 'docs/index.html'
+shortlist = True
+
+publications = pd.read_csv(publications_file)
+
+if not shortlist:
+    #Pretty print
+    segment = '\t\t\t\t\t' + placeholder 
+    publications = publications[['CategoryID', 'Category', 'Year', 'Month', 'Selected', 'concatenation']].sort_values(['CategoryID', 'Year', 'Month'], ascending=[True, False, False])
+    for _, category, group1 in publications.groupby(['CategoryID', 'Category'], sort=False):
+        segment += '<h4>' + category + '</h4>'
+        for year, group2 in group1.groupby(['Year'], sort=False):
+            segment += '<p>' + str(year) + '</p>'
+            segment += '<ul>'
+            segment += group2['concatenation'].str.cat(sep='')
+            segment += '</ul>'
+else:
+    #Filter non selected publications
+    publications = publications[~publications.Order.isnull()].sort_values('Order', ascending=True)
+
+    #Column transformation
+    publications.Authors = publications.Authors.apply(lambda x : x.replace(author, '<u>' + author + '</u>'))
+    publications.Title = '<em>' + publications.Title + '</em>'
+    publications.PDF = publications.PDF.apply(lambda x : '[<a href=\"' + x + '\">pdf</a>]' if x.endswith('.pdf') else '')
+    publications.Slides = publications.Slides.apply(lambda x : '[<a href=\"' + x + '\">slides</a>]' if pd.notnull(x) else '')
+    publications.Bibtex = publications.Bibtex.apply(lambda x : '[<a href=\"' + x + '\">bib</a>]' if pd.notnull(x) else '')
+
+    publications['ID'] = '[<b>' + publications.Conference + '\'' + publications.Year.apply(lambda x: str(x)[2:]) + '</b>]'
+    
+    #Column concatenation
+    publications['concatenation'] = '<p>' + publications.ID + ' ' + publications.Authors + ' ' + publications.Title + ' ' + publications.PDF + ' ' + publications.Slides + ' ' + publications.Bibtex + '</p>'
+    segment = '\t\t\t\t\t' + placeholder + publications['concatenation'].str.cat(sep='') + '\n'
+
+    #Replace placeholder on 'index_html' file
+    with open(index_html, 'r') as input_file, open(index_html+'.tmp', 'w') as output_file:
+        for line in input_file:
+            if line.strip().startswith(placeholder):
+                output_file.write(segment)
+            else:
+                output_file.write(line)
+    os.rename(index_html+'.tmp', index_html)
