@@ -29,14 +29,15 @@ else:
     #Column transformation
     publications.Authors = publications.Authors.apply(lambda x : x.replace(author, '<u>' + author + '</u>'))
     publications.Title = '<em>' + publications.Title + '</em>'
-    publications.PDF = publications.PDF.apply(lambda x : '[<a href=\"' + x + '\">pdf</a>]' if x.endswith('.pdf') else '')
-    publications.Slides = publications.Slides.apply(lambda x : '[<a href=\"' + x + '\">slides</a>]' if pd.notnull(x) else '')
-    publications.Bibtex = publications.Bibtex.apply(lambda x : '[<a href=\"' + x + '\">bib</a>]' if pd.notnull(x) else '')
+    publications.PDF = publications.PDF.apply(lambda x : '<a href=\"' + x + '\">pdf</a>, ' if pd.notnull(x) else '')
+    publications.Slides = publications.Slides.apply(lambda x : '<a href=\"' + x + '\">slides</a>, ' if pd.notnull(x) else '')
+    publications.Bibtex = publications.Bibtex.apply(lambda x : '<a href=\"' + x + '\">bib</a>, ' if pd.notnull(x) else '')
 
     publications['ID'] = '[<b>' + publications.Conference + '\'' + publications.Year.apply(lambda x: str(x)[2:]) + '</b>]'
     
     #Column concatenation
-    publications['concatenation'] = '<p>' + publications.ID + ' ' + publications.Authors + ' ' + publications.Title + ' ' + publications.PDF + ' ' + publications.Slides + ' ' + publications.Bibtex + '</p>'
+    publications['concatenation'] = '<p>' + publications.ID + ' ' + publications.Authors + ' ' + publications.Title + ' [' + publications.PDF + publications.Slides + publications.Bibtex + ']</p>'
+    publications['concatenation'] = publications['concatenation'].str.replace(', ]', ']', regex=False)
     segment = '\t\t\t\t\t' + placeholder + publications['concatenation'].str.cat(sep='') + '\n'
 
     #Replace placeholder on 'index_html' file
