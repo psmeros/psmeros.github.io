@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <title>Combating Online Scientific Misinformation</title>
+        <meta name="keywords" content="Misinformation, Scientific Misinformation, COVID-19 Misinformation, Fact-Checking, Computational Journalism, Scientific Journalism, Science Communication, Scientific News, SciClops, SciLens, SciLander" lang="en"> 
+        <meta name="description" content="Combating Online Scientific Misinformation">
+        <meta name="author" content="Panayiotis Smeros">
+        <link rel="shortcut icon" type="image/png" href="assets/img/sci.png"/> 
+    
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v5.15.1/js/all.js" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet" type="text/css" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+    </head>
+    <body id="page-top">
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
+            <a class="navbar-brand js-scroll-trigger" href="#page-top">
+                <span class="d-block d-lg-none">Combating Online Scientific Misinformation</span>
+                <span class="d-none d-lg-block"><img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="assets/img/sci.png" alt="" /></span>
+            </a>
+            
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#SciClops">SciClops</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#SciLens">SciLens</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#SciLander">SciLander</a></li>                    
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#details">Details</a></li>
+                </ul>
+            </div>
+        </nav>
+        <!-- Page Content-->
+        <div class="container-fluid p-0">
+            <!-- About-->
+            <section class="resume-section" id="about">
+                <div class="resume-section-content">
+                    <h2 class="mb-0"><span class="text-primary">Combating Online Scientific Misinformation</span></h2>
+                    <div class="subheading mb-0"><a href="http://panayiotis.smeros.info">Panayiotis Smeros</a>, <a href="http://chato.cl">Carlos Castillo</a>, <a href="http://people.epfl.ch/karl.aberer/?lang=en">Karl Aberer</a></div>
+                    <div class="subheading mb-5">PhD Thesis at <a href="http://epfl.ch">EPFL</a></div>
+                    <p class="lead mb-3"  style="text-align: justify;">
+                        The drastic shift towards <b>digital communication</b> in our mediasphere has caused a profound change in the production and consumption of information, which in turn has substantial implications on the <b>social and political landscape</b>.
+                        Misinformation, as a side effect of mass information diffusion, has become a fundamental problem for <b>governments, platforms, and the general public</b> in light of critical events such as <b>elections, pandemics, and wars</b>.
+                        In this thesis, we focus on the problem of online <b>scientific misinformation</b>, proposing methods that tackle the problem at different granularity levels: at the level of claims, articles, and sources.
+                    </p>
+                    <div class="social-icons text-center">
+                        <a class="social-icon" href="mailto:panayiotis.smeros@alumni.epfl.ch" target="_blank"><i class="fa fa-envelope"></i></a>
+                        <a class="social-icon" href="http://twitter.com/psmeros" target="_blank"><i class="fab fa-twitter"></i></a>                        
+                        <a class="social-icon" href="http://linkedin.com/in/psmeros" target="_blank"><i class="fab fa-linkedin"></i></a>
+                        <a class="social-icon" href="http://github.com/psmeros" target="_blank"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+            </section>
+            <hr class="m-0" />
+            <section class="resume-section" id="SciClops">
+                <div class="resume-section-content">
+                    <h2 class="mb-5">SciClops</h2>
+                    <p class="lead mb-3" style="text-align: justify;">                        
+                        For combating claim-based scientific misinformation, we introduce <b>SciClops</b>, a method for detecting and contextualizing scientific claims for assisting manual fact-checking. 
+                        Our method involves three steps: (1) extracting scientific claims using a <b>domain-specific, fine-tuned transformer model</b>, (2) clustering similar claims together with <b>related scientific literature</b> using a method that exploits their content and the connections among them, and (3) highlighting check-worthy claims broadcasted by <b>popular yet unreliable sources</b>. 
+                        Our experiments show that SciClops effectively assists non-expert fact-checkers in verifying complex scientific claims, facilitating them to <b>outperform commercial fact-checking systems</b>.
+                    </p>
+                    <p class="lead mb-0 text-center">
+                        <img src="assets/sci-img/SciClops_Overview.png" alt="SciClops Overview" style="height:10em"/>
+                    </p>
+                    <p class="lead mb-0 text-center">
+                        SciClops Overview
+                    </p>
+                </div>
+            </section>            
+            <hr class="m-0" />
+            <section class="resume-section" id="SciLens">
+                <div class="resume-section-content">
+                    <h2 class="mb-5">SciLens</h2>
+                    <p class="lead mb-3"  style="text-align: justify;">                        
+                        For combating article-based scientific misinformation, we introduce <b>SciLens</b>, a method for evaluating the quality of scientific news articles.
+                        Our method involves a series of quality indicators for news articles that derive from: (1) their content, including the use of <b>attributed quotes</b>, (2) their scientific context, including their <b>semantic similarity and web proximity to the scientific literature</b>, and (3) their social context, including their <b>social media reach and stance</b>.
+                        Our experiments show that <b>these indicators help non-experts</b> evaluate the quality of articles more accurately compared to non-experts that do not have access to these indicators.
+                        Moreover, SciLens can also produce completely <b>automated quality scores for articles</b>, which agree more with expert evaluators than manual evaluations done by non-experts.
+                    </p>
+                    <p class="lead mb-0 text-center">
+                        <img src="assets/sci-img/SciLens_Overview.png" alt="SciLens Overview" style="height:10em"/>
+                    </p>
+                    <p class="lead mb-0 text-center">
+                        SciLens Overview
+                    </p>
+                </div>
+            </section>            
+            <hr class="m-0" />
+            <section class="resume-section" id="SciLander">
+                <div class="resume-section-content">
+                    <h2 class="mb-5">SciLander</h2>
+                    <p class="lead mb-3"  style="text-align: justify;">                        
+                        For combating source-based scientific misinformation, we introduce <b>SciLander</b>, a method for learning representations of news sources reporting on scientific topics.
+                        Our method involves heterogeneous source indicators that capture: (1) the <b>copying</b> of news stories between sources, (2) the <b>semantic shift</b> of terms across sources, (3) the usage of <b>jargon</b>, and (4) the <b>stance</b> towards specific citations.
+                        SciLander uses these indicators as signals of source agreement to train <b>unsupervised source embeddings</b>.
+                        Our experiments show that the learned source representations outperform state-of-the-art baselines on the task of <b>news veracity classification</b> while encoding information about the <b>reliability, political leaning, and partisanship bias</b> of these sources.
+                    </p>
+                    <p class="lead mb-0 text-center">
+                        <img src="assets/sci-img/SciLander_Overview.png" alt="SciLander Overview" style="height:10em"/>
+                    </p>
+                    <p class="lead mb-0 text-center">
+                        SciLander Overview
+                    </p>
+                </div>
+            </section>            
+            <hr class="m-0" />
+            <!-- Details-->
+            <section class="resume-section" id="details">
+                <div class="resume-section-content">
+                    <h2 class="mb-5">Details</h2>
+                    <div class="subheading mb-0">Publications</div>
+                    <ul class="fa-ul mb-3">
+                        <li>[<b>ICWSM'23</b>] M. Gruppi, P. Smeros, S. Adali, C. Castillo, K. Aberer. <em>SciLander: Mapping the Scientific News Landscape.</em> [<a href="files/icwsm2023.pdf">pdf</a>, <a href="files/icwsm2023.bib">bib</a>]</li>
+                        <li>[<b>CIKM'21</b>] P. Smeros, C. Castillo, K. Aberer. <em>SciClops: Detecting and Contextualizing Scientific Claims for Assisting Manual Fact-Checking.</em> [<a href="files/cikm2021.pdf">pdf</a>, <a href="files/cikm2021.pptx">slides</a>, <a href="files/cikm2021.bib">bib</a>]</li>
+                        <li>[<b>VLDB'20</b>] A. Romanou, P. Smeros, C. Castillo, K. Aberer. <em>SciLens News Platform: A System for Real-Time Evaluation of News Articles.</em> [<a href="files/vldb2020.pdf">pdf</a>, <a href="files/vldb2020.bib">bib</a>]</li>
+                        <li>[<b>WWW'19</b>] P. Smeros, C. Castillo, K. Aberer. <em>SciLens: Evaluating the Quality of Scientific News Articles Using Social Media and Scientific Literature Indicators.</em> [<a href="files/www2019.pdf">pdf</a>, <a href="files/www2019.pptx">slides</a>, <a href="files/www2019.bib">bib</a>]</li>                        
+                    </ul>
+                    <div class="subheading mb-0">System</div>
+                    <ul class="fa-ul mb-3">
+                        <li><a href="https://newsteller.lsir.ch">NewsTeller</a>: Real-Time News Analytics Platform</li>
+                    </ul>
+                    <div class="subheading mb-0">Code, Models, Datasets</div>
+                    <ul class="fa-ul mb-3">
+                        <li>Code Release for <a href="http://github.com/psmeros/SciClops">SciClops</a>, <a href="http://github.com/psmeros/SciLens">SciLens</a>, and <a href="http://github.com/psmeros/SciLander">SciLander</a></li>
+                        <li><a href="https://huggingface.co/psmeros/NewsBERT">NewsBERT</a> and <a href="https://huggingface.co/psmeros/SciNewsBERT">SciNewsBERT</a> models for <b>scientific claim extraction</b></li>
+                        <li>Anonymized evaluations of <b>scientific claims</b> by <a href="data/SciClops_expert_evaluations.csv">experts</a>, <a href="data/SciClops_non_expert_evaluations.csv">non-experts</a>, and <a href="data/SciClops_commercial_systems_evaluations.csv">commercial systems</a></li>
+                        <li>Anonymized evaluations of <b>scientific news articles</b> by <a href="data/SciLens_expert_evaluations.csv">experts</a> and <a href="data/SciLens_non_expert_evaluations.csv">non-experts</a></li>
+                        <li>Anonymized <b>social media postings</b>, <b>news articles</b>, and <b>scientific papers</b> in <a href="data/diffusion_graph.tsv.bz2">graph format</a></li>
+                        <li>Lists of <a href="data/academic_repositories.csv">Academic Repositories</a> and <a href="data/institution_domains.csv">Institution Domains</a></li>
+                    </ul>
+                    <div class="subheading mb-0">Support</div>
+                    <ul class="fa-ul mb-3">
+                        <li><a href="https://www.epfl.ch/research/open-science/champions" target="_blank">Open Science Fund</a></li>
+                        <li><a href="https://www.satw.ch/en" target="_blank">Swiss Academy of Engineering Sciences</a></li>
+                    </ul>
+                </div>
+            </section>
+            <hr class="m-0" />
+        </div>
+
+        <footer class="footer">
+            <div class="text-center"><small class="copyright">Last update 10/2022. Template designed by <a href="https://startbootstrap.com/theme/resume" target="_blank">Start Bootstrap</a>.</small></div>
+        </footer>    
+        <!-- Bootstrap core JS-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Third party plugin JS-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+    </body>
+</html>
