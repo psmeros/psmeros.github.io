@@ -4,9 +4,9 @@ import pandas as pd
 import os
 
 author = 'P. Smeros'
-publications_file = 'docs/files/publications.csv'
+publications_file = './publications.csv'
 placeholder = '<!--//PUBLICATIONS!!-->'
-index_html = 'docs/index.html'
+index_html = '../index.html'
 shortlist = True
 
 publications = pd.read_csv(publications_file)
