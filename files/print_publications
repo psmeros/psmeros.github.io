@@ -24,7 +24,7 @@ if not shortlist:
             segment += '</ul>'
 else:
     #Filter non selected publications
-    publications = publications[~publications.Order.isnull()].sort_values('Order', ascending=True)
+    publications = publications[~publications.Order.isnull()].sort_values('Order', ascending=False)
 
     #Column transformation
     publications.Authors = publications.Authors.apply(lambda x : x.replace(author, '<u>' + author + '</u>'))
